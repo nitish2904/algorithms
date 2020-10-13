@@ -16,12 +16,12 @@ int solve(vector<int>arr,int n){
 		pq.pop();
 		visited[u]=true;
 
-		if(u+2 < n && !visited[u+2] && (dist[u+2]==-1 || dist[u]+arr[u+2]<dist[u+2])){
-			dist[u+2] = dist[u]+arr[u+2];
+		if(u+2 < n && !visited[u+2] && (dist[u+2]==-1 || dist[u]+arr[u]<dist[u+2])){
+			dist[u+2] = dist[u]+arr[u];
 			pq.push({dist[u+2],u+2});
 		}
-		if(u-1>=0 && !visited[u-1] && (dist[u-1]==-1 ||dist[u]+arr[u-1]<dist[u-1])){
-			dist[u-1]=dist[u]+arr[u-1];
+		if(u-1>=0 && !visited[u-1] && (dist[u-1]==-1 ||dist[u]+arr[u]<dist[u-1])){
+			dist[u-1]=dist[u]+arr[u];
 			pq.push({dist[u-1],u-1});
 		}
 	}
