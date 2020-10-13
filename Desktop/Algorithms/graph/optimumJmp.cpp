@@ -25,7 +25,7 @@ int solve(vector<int>arr,int n){
 			pq.push({dist[u-1],u-1});
 		}
 	}
-	return min(dist[n-1],arr[n-1],dist[n-2],arr[n-2]);
+	return min(dist[n-1]+arr[n-1],dist[n-2]+arr[n-2]);
 
 }
 int main(){
