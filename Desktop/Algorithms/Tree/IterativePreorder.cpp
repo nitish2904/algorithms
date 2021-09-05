@@ -19,7 +19,7 @@ void preorder(Node* root){
 		return;
 	stack<Node*>st;
 	st.push(root);
-	cout<< "preorder";
+	cout<< "preorder : ";
 	while(!st.empty()){
 		root = st.top();
 		st.pop();
